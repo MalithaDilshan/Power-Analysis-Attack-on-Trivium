@@ -1,0 +1,217 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004-005 strtok.save
+006-009 _Randseed
+00A-02D stateee
+02E-03D outputtt
+03E-04D MAIN.in
+04E-05D MAIN.out
+05E-067 MAIN.key
+068-071 MAIN.iv
+072-092 MAIN.buffer
+093-094 MAIN.hex
+095     MAIN.i
+096     MAIN.temp
+097     @delay_ms1.P1
+097-098 encrypt.key
+097     MAIN.@SCRATCH1
+098     @PRINTF_X_9600_31766_31767.P1
+098     MAIN.@SCRATCH2
+099     @PRINTF_X_9600_31766_31767.P1
+099-09A encrypt.iv
+099     MAIN.@SCRATCH3
+09A     convertdigit.digit
+09B-09C encrypt.input
+09B     convertdigit.value
+09D-09E encrypt.length
+09F-0A0 cipher.key
+0A1-0A2 cipher.iv
+0A3-0A4 cipher.input
+0A5-0A6 cipher.length
+0A7-0A8 ip_cipher.key
+0A9-0AA ip_cipher.iv
+0AB-0AC ip_cipher.input
+0AD-0AE ip_cipher.length
+0AF-0B0 ip_cipher.mark
+0B1-0B2 ip_cipher.iter
+0B3-0C2 ip_cipher.input_backup
+0C3-0C4 ip_cipher.state
+0C5     ip_cipher.keystream
+0C6-0C7 stream.state
+0C6-0C7 setup.key
+0C6     ip_cipher.@SCRATCH1
+0C7     ip_cipher.@SCRATCH2
+0C8     stream.keystream
+0C8-0C9 setup.iv
+0C8     ip_cipher.@SCRATCH3
+0C9     stream.z
+0CA-0CB stream.bit
+0CA-0CB setup.mark
+0CC     setup.zero
+0CC-0CD update.state
+0CC     stream.@SCRATCH1
+0CD     setup.end
+0CD     stream.@SCRATCH2
+0CE     update.t1
+0CE-0CF insert_iv.p_mark
+0CE-0CF insert_key.p_mark
+0CE-0CF insert_byte.p_mark
+0CF     update.t2
+0D0-0D1 insert_iv.iv
+0D0-0D1 insert_key.key
+0D0-0D1 insert_byte.b8
+0D0     update.t3
+0D1     update.z
+0D2-0D3 insert_iv.iter
+0D2-0D3 insert_key.mark
+0D2     update._
+0D2-0D3 insert_byte.repeat
+0D3-0D4 update.iter
+0D4-0D5 insert_iv.mark
+0D4-0D5 insert_byte.mark
+0D4     insert_key.@SCRATCH1
+0D5-0D6 psb.state
+0D5     insert_key.@SCRATCH2
+0D5     update.@SCRATCH1
+0D6-0D7 insert_byte.iter
+0D6-0D7 gsb.state
+0D6-0D7 acw.split
+0D6     insert_iv.@SCRATCH1
+0D6     update.@SCRATCH2
+0D7-0D8 psb.from
+0D7-0D8 scw.split
+0D7     insert_iv.@SCRATCH2
+0D8-0D9 memmove.s1
+0D8-0D9 gsb.index
+0D8-0D9 acw.offset
+0D8     insert_byte.@SCRATCH1
+0D9-0DA psb.index
+0D9-0DA scw.offset
+0D9     insert_byte.@SCRATCH2
+0DA-0DB memmove.s2
+0DA-0DB gsb.b8
+0DA-0DB acw.post
+0DB-0DC psb.b8
+0DB-0DC scw.post
+0DC-0DD gsb.bit
+0DC-0DD acw.pre
+0DC-0DD memmove.n
+0DD-0DE psb.bit
+0DD-0DE scw.pre
+0DE     acw.mask
+0DE-0DF memmove.sc1
+0DE     gsb.@SCRATCH1
+0DF     scw.mask
+0DF     acw.shifted
+0DF     gsb.@SCRATCH2
+0DF     psb.@SCRATCH1
+0E0-0E1 gb.from
+0E0     scw.shifted
+0E0-0E1 memmove.sc2
+0E0     acw.@SCRATCH1
+0E0     psb.@SCRATCH2
+0E1-0E2 pb.to
+0E1     scw.@SCRATCH1
+0E1     acw.@SCRATCH2
+0E2-0E3 gb.index
+0E2     memmove.@SCRATCH1
+0E2     scw.@SCRATCH2
+0E2     acw.@SCRATCH3
+0E3-0E4 pb.from
+0E3     memmove.@SCRATCH2
+0E3     scw.@SCRATCH3
+0E4     gb.b8
+0E4     memmove.@SCRATCH3
+0E5-0E6 pb.index
+0E5     gb.shifted
+0E6     gb.@SCRATCH1
+0E7     pb.mask
+0E8     pb.put
+0E9     pb.@SCRATCH1
+0EA     pb.@SCRATCH2
+0EB     pb.@SCRATCH3
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2_LOW
+FBB     CCP_2
+FBC     CCP_2_HIGH
+FBE     CCP_1
+FBE     CCP_1_LOW
+FBF     CCP_1_HIGH
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P1
+FE9-FEA @READ_PROGRAM_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P3
+FE9-FEA @WRITE_PROGRAM_MEMORY.P4
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
+FF6-FF8 @READ_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+0004  memmove
+09A4  @delay_ms1
+0572  scw
+0194  acw
+0128  insert_byte
+00DC  insert_key
+0246  insert_iv
+02D4  setup
+0446  gb
+04BA  pb
+047E  gsb
+0530  psb
+0634  update
+081A  stream
+0872  ip_cipher
+0936  cipher
+097C  encrypt
+0346  convertdigit
+03BC  @goto11391
+09CE  MAIN
+0404  @PRINTF_X_9600_31766_31767
+09CE  @cinit
+0136  StrtoulGO
+0136  StrtolGO
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    C:\Users\PC\Desktop\trivium_2_picc\PIC 32byte input\
+
+Project Files:
+    main.c
+    ..\..\..\..\..\Program Files (x86)\PICC\devices\18F2550.h
+    ..\..\..\..\..\Program Files (x86)\PICC\drivers\stdlib.h
+    ..\..\..\..\..\Program Files (x86)\PICC\drivers\stddef.h
+    ..\..\..\..\..\Program Files (x86)\PICC\drivers\string.h
+    ..\..\..\..\..\Program Files (x86)\PICC\drivers\ctype.h
+    ..\..\..\..\..\Program Files (x86)\PICC\drivers\stdint.h
+    ..\..\..\..\..\Program Files (x86)\PICC\drivers\stdio.h
+
+Units:
+    C:\Users\PC\Desktop\trivium_2_picc\PIC 32byte input\main (main)
+
+Compiler Settings:
+    Processor:      PIC18F2550
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      main.err
+    Ext Symbols: main.esym
+    INHX32:      main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.PJT
+    Call Tree:   main.tre
+    Statistics:  main.sta

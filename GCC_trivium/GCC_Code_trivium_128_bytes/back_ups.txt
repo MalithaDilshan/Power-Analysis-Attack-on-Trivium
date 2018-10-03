@@ -1,0 +1,24 @@
+	for(j=0;j<4;j++){ 
+			// hold the encripted output for each segment
+			u8 segment_out[64];  
+    			for(i=0;i<64;i++){
+        			hex[0] = buffer[j*64+i*2];
+        			hex[1] = buffer[j*64+i*2+1];
+        			in[i] = convertdigit(hex[1])+16*convertdigit(hex[0]);
+    			}
+
+			for(i=0;i<64;i++){
+				segment_out[i] = 0;
+			}
+			// copy memeory 
+    			memcpy(segment_out, encrypt(key, iv, in, 64), 64);
+			// move data to output 
+			for(i=0;i<64;i++){
+				printf("%02X",segment_out[i]);
+			}
+			printf("\n");
+			int k;
+			for(k=0;k<64;k++){
+				out[j*64+k] = segment_out[k];
+			}
+		}

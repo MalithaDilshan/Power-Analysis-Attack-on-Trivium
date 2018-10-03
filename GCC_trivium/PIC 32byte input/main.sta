@@ -1,0 +1,68 @@
+
+ROM used: 2994 (9%)
+          2994 (9%) including unused fragments
+
+          1 Average locations per line
+          6 Average locations per statement
+
+RAM used: 154 (8%) at main() level
+          236 (12%) worst case
+
+Stack used: 7 worst case (out of 31 total available)
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  631   164  31  main.c
+  409     0   0  ..\..\..\..\..\Program Files (x86)\PICC\devices\18F2550.h
+ 1273   359  69  ..\..\..\..\..\Program Files (x86)\PICC\drivers\stdlib.h
+   32     0   0  ..\..\..\..\..\Program Files (x86)\PICC\drivers\stddef.h
+  409     0   0  ..\..\..\..\..\Program Files (x86)\PICC\drivers\string.h
+   28     0   0  ..\..\..\..\..\Program Files (x86)\PICC\drivers\ctype.h
+  163     0   0  ..\..\..\..\..\Program Files (x86)\PICC\drivers\stdint.h
+   37     0   0  ..\..\..\..\..\Program Files (x86)\PICC\drivers\stdio.h
+----- -----
+ 2982   523 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0    216   4  13   485  7.8  memmove
+0     42   1   1             @delay_ms1
+0    194   3  13   369  6.1  scw
+0    178   3  13   371  6.5  acw
+0    108   2  12   310  5.1  insert_byte
+0     76   1   8   176  3.5  insert_key
+0    142   2  10   395  5.5  insert_iv
+0    114   2   8   391  3.7  setup
+0     56   1   7   141  4.4  gb
+0    118   2  11   289  5.7  pb
+0     60   1  10   149  4.4  gsb
+0     66   1  12   190  4.3  psb
+0    486   8  11  1361  6.3  update
+0     88   1   8   296  5.6  stream
+0    196   3  31   716  7.1  ip_cipher
+0     70   1   8   172  2.8  cipher
+0     40   1   8   119  2.6  encrypt
+0    118   2   2   983  4.9  convertdigit
+0     72   1   0             @goto11391
+0    484   8  92  2076  8.0  MAIN
+0     66   1   2             @PRINTF_X_9600_31766_31767
+
+Program metrics:
+    Functions               18
+    Statements              523
+    Comments                882
+    Volume (V)              14750
+    Difficilty (D)          95.6
+    Effort to implement (E) 1410736
+    Time to implement (T)   21 hours, 46 minutes
+    Est Delivered Bugs (B)  4
+    Cyclomatic Complexity   32
+    Maintainability (MI)    32
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00002     4  0  
+00004-07FFE  2990  29774  
+
+
+
